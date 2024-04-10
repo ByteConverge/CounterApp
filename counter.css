@@ -1,0 +1,184 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+body {
+  /* transition: all 1s ease-in; */
+  background: linear-gradient(white, rgb(242, 237, 228));
+  font-size: arial;
+}
+
+:root {
+  --bgBlue: rgb(171, 239, 240);
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  /* background-color: rgb(242, 178, 178); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  position: relative;
+  background: var(--bgBlue);
+  color: rgb(0, 0, 0);
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.toggle {
+  height: 2rem;
+  width: 2rem;
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+}
+
+.restartCount {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+  background: lightblue;
+  box-shadow: 0 0 2rem black;
+  position: absolute;
+  right: 10%;
+  top: 150%;
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+}
+
+/* style for main */
+
+main {
+  align-self: center;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid black;
+  position: relative;
+  box-shadow: 0 0 2rem black;
+}
+
+.divider {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  border: none;
+  position: absolute;
+  top: 50%;
+}
+
+.reset {
+  position: relative;
+  top: 15%;
+  background: red;
+  color: white;
+  width: 15%;
+  height: 10%;
+  border-radius: 10px;
+}
+
+.increes-decrees {
+  position: relative;
+  top: 25%;
+  width: 40%;
+
+  /* width: 5; */
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+
+.increes-decrees button {
+  width: 30%;
+  height: 1.5rem;
+  border-radius: 5px;
+  border: 2px solid rgb(42, 223, 42);
+  /* background-color: red; */
+}
+
+.displayScreen {
+  height: 30%;
+  width: 50%;
+  position: absolute;
+  top: 15%;
+  text-align: center;
+  font-size: 8rem;
+  background: none;
+  border: none;
+}
+
+.displayScreen:focus {
+  outline: none;
+}
+
+.cursor-p {
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+  border: 1px solid black;
+  display: flex;
+  background: rgb(171, 239, 240);
+
+  /* height: 10vh; */
+}
+
+.maxCount {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  height: 3rem;
+  text-align: center;
+  /* font-size: 1.2rem; */
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    width: 18rem;
+    height: 18rem;
+  }
+  .restartCount {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+  }
+  .displayScreen {
+    font-size: 5rem;
+  }
+  .reset {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  main {
+    width: 15rem;
+    height: 15rem;
+  }
+  .restartCount {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+  }
+  .displayScreen {
+    font-size: 5rem;
+  }
+}

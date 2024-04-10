@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+body {
+  border: 1rem solid rgb(10, 84, 154);
+  max-width: 100vw;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+}
+.toggle {
+  background-color: black;
+  height: 1.4rem;
+  width: 1.4rem;
+  border-radius: 50%;
+  outline: 2px dotted rgb(156, 49, 49);
+  outline-offset: 3px;
+  cursor: pointer;
+}
+
+main {
+  justify-self: center;
+  align-self: center;
+  margin: 0 auto;
+  width: 30rem;
+  height: 30rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: relative;
+}
+
+.displayScreen {
+  all: unset;
+  /* width: 50%; */
+  height: 40%;
+  position: absolute;
+  top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8rem;
+  text-align: center;
+}
+.divider {
+  color: black;
+  width: 100%;
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  height: 1%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.reset {
+  position: absolute;
+  bottom: 35%;
+  background: red;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.increes-decrees {
+  width: 70%;
+  height: 2rem;
+  position: absolute;
+  bottom: 25%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.increes-decrees button {
+  /* font-size: 2rem; */
+  font-weight: bolder;
+  border-radius: 10px;
+  width: 3rem;
+  border: 2px greenyellow solid;
+}
+
+footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.maxCount {
+  width: 20%;
+  height: 2rem;
+  position: sticky;
+  left: 90%;
+}
+
+.restartCount {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
+  z-index: -1;
+  box-sizing: border-box;
+  font-size: 4rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(79, 132, 22);
+  position: absolute;
+  top: 12%;
+  right: 10%;
+  border: 1px solid black;
+}
+
+.d-None {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    height: 19rem;
+    width: 19rem;
+  }
+}
